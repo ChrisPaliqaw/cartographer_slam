@@ -2,6 +2,7 @@ import os.path
 from launch import LaunchDescription
 from launch_ros.actions import Node
 from ament_index_python.packages import get_package_share_directory
+import ament_index_python.packages
 
 def generate_launch_description():
     cartographer_config_dir = os.path.join(get_package_share_directory('cartographer_slam'), 'config')
