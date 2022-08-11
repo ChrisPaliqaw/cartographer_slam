@@ -31,7 +31,7 @@ if(BUILD_TESTING)
 endif()
 
 install(
-  DIRECTORY launch config rviz
+  DIRECTORY launch config_warehouse config_gazebo rviz
   DESTINATION share/${PROJECT_NAME}
 )
 
