@@ -21,7 +21,7 @@ test the bridge in the `teleop` window
 ros2 run teleop_twist_keyboard teleop_twist_keyboard --ros-args --remap cmd_vel:=/robot/cmd_vel
 ```
 
-# Step 1: Mapping
+## Step 1: Mapping
 
 `build` shell
 ```
@@ -33,6 +33,19 @@ source ~/ros2_ws/install/setup.bash
 ```
 ros2 run teleop_twist_keyboard teleop_twist_keyboard --ros-args --remap cmd_vel:=/robot/cmd_vel
 ```
+
+### Option 1: full `mapper` launch: cartographer + rviz2
+```
+cd ros2_ws/
+colcon build
+source ~/ros2_ws/install/setup.bash
+ros2 launch cartographer_slam cartographer_full.launch.py
+```
+Get data needed for config file using the `scan` topic, then edit `cartographer.lua` 
+```
+ros2 topic echo -f /scan > scan.txt
+```
+
 `cartographer` shell: cartographer and occupancy grid nodes
 ```
 cd ros2_ws/
@@ -47,17 +60,7 @@ colcon build
 source ~/ros2_ws/install/setup.bash
 ros2 launch cartographer_slam rviz.launch.py
 ```
-full `mapper` launch: cartographer + rviz2
-```
-cd ros2_ws/
-colcon build
-source ~/ros2_ws/install/setup.bash
-ros2 launch cartographer_slam cartographer_full.launch.py
-```
-Get data needed for config file using the `scan` topic, then edit `cartographer.lua` 
-```
-ros2 topic echo -f /scan > scan.txt
-```
+
 
 Use teleop to move all around the warehouse. When ready, save the map to the config folder
 ```
