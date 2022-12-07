@@ -1,12 +1,9 @@
 # cartographer_slam
 Use Google's cartographer package with an RB-1 Base
 
-`git` shell
-```
-git config --global user.email christophomos@gmail.com
-git config --global user.name "Chris Paliqaw"
-```
-`gz` shell
+## Preliminaries
+
+In your `gz` shell
 ```
 source ~/simulation_ws/devel/setup.bash
 roslaunch rb1_base_gazebo warehouse_rb1.launch
