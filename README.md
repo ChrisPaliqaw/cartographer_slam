@@ -75,7 +75,7 @@ cd ~/ros2_ws/src/cartographer_slam/config
 ```
 Save the map files
 ```
-
+ros2 run nav2_map_server map_saver_cli -f neobotix_area_gazebo
 ```
 
 Rename the resulting map files to make it clear whether they were generated using gazebo or the real warehouse
