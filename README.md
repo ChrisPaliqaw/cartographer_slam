@@ -30,6 +30,8 @@ colcon build --packages-select cartographer_slam
 source ~/ros2_ws/install/setup.bash
 ```
 
+**Remember to use `save as...` in whether you use option 1 or 2 when altering the rviz config file, since the launch files uses copies of the rviz config files from the `install` folder**
+
 ### Option 1: full `mapper` launch: cartographer + rviz2
 ```
 cd ros2_ws/
@@ -46,7 +48,7 @@ colcon build
 source ~/ros2_ws/install/setup.bash
 ros2 launch cartographer_slam cartographer.launch.py
 ```
-`rviz` shell (just remember to use `save as...` to alter the config file, since the launch file uses the copy in the install dir)
+`rviz` shell
 ```
 cd ros2_ws/
 colcon build
