@@ -38,7 +38,7 @@ source ~/ros2_ws/install/setup.bash
 ros2 launch cartographer_slam cartographer_full.launch.py
 ```
 
-### Option 2: separate cartographer and rviz shells
+### Option 2: separate `cartographer` and `rviz` shells
 `cartographer` shell: cartographer and occupancy grid nodes
 ```
 cd ros2_ws/
