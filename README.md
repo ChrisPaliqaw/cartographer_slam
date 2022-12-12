@@ -41,11 +41,8 @@ colcon build
 source ~/ros2_ws/install/setup.bash
 ros2 launch cartographer_slam cartographer_full.launch.py
 ```
-Get data needed for config file using the `scan` topic, then edit `cartographer.lua` 
-```
-ros2 topic echo -f /scan > scan.txt
-```
 
+### Option 2: separate cartographer and rviz shells
 `cartographer` shell: cartographer and occupancy grid nodes
 ```
 cd ros2_ws/
@@ -60,6 +57,16 @@ colcon build
 source ~/ros2_ws/install/setup.bash
 ros2 launch cartographer_slam rviz.launch.py
 ```
+
+### Configure cartographer
+
+Get data needed for config file using the `scan` topic, then edit `cartographer.lua` 
+```
+ros2 topic echo -f /scan > scan.txt
+```
+
+### Map
+
 
 
 Use teleop to move all around the warehouse. When ready, save the map to the config folder
