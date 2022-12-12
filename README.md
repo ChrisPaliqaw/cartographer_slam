@@ -29,10 +29,6 @@ cd ros2_ws/
 colcon build --packages-select cartographer_slam
 source ~/ros2_ws/install/setup.bash
 ```
- `teleop` shell
-```
-ros2 run teleop_twist_keyboard teleop_twist_keyboard --ros-args --remap cmd_vel:=/robot/cmd_vel
-```
 
 ### Option 1: full `mapper` launch: cartographer + rviz2
 ```
